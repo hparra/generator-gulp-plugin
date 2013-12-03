@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "description": "A generator for Yeoman",
   "keywords": [
+  	"gulp",
+  	"gulpplugin",
     "yeoman-generator"
   ],
   "homepage": "https://github.com/hparra/generator-gulp-plugin",
