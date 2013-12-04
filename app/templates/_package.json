@@ -25,7 +25,9 @@
     "event-stream": "*"
   },
   "devDependencies": {
-    "mocha": "~1.14.0"
+    "mocha": "~1.14.0",
+    "gulp": "~2.6.1",
+    "gulp-jshint": "~1.1.0"
   },
   "engines": {
     "node": ">=0.8.0",
