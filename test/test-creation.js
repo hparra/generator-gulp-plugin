@@ -30,7 +30,9 @@ describe("gulp-plugin generator", function () {
             "Gulpfile.js",
             "LICENSE",
             "package.json",
-            "README.md"
+            "README.md",
+            "test/main.js",
+            "test/fixtures/hello.txt"
         ];
 
 		this.app.userInfo = function () {
