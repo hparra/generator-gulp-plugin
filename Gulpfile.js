@@ -1,12 +1,23 @@
 "use strict";
 
 var gulp = require("gulp"),
-	ignore = require("gulp-ignore"),
+	fs = require("fs"),
 	jshint = require("gulp-jshint");
 
 // JSHint
 // https://github.com/wearefractal/gulp-jshint
-gulp.task("jshint", function() {
+gulp.task("jshint", function () {
+
+	//
+	// FIXME
+	//
+	// gulp.jshint not reading .jshintrc
+	// side-effect of JSHint itself not read configuration when using stdin
+	//
+	// https://github.com/wearefractal/gulp-jshint/issues/4
+	//
+
+	var options = JSON.parse(fs.readFileSync(".jshintrc", "utf8"));
 
 	//
 	// FIXME
@@ -21,21 +32,23 @@ gulp.task("jshint", function() {
 	//
 	// Must wait for core impl of .src() ignores
 	//
+	// https://github.com/wearefractal/gulp/issues/35
+	//
 
 	gulp.src("./*.js")
-		.pipe(jshint())
+		.pipe(jshint(options))
 		.pipe(jshint.reporter("default"));
 
 	gulp.src("./app/**/*.js")
-		.pipe(jshint())
+		.pipe(jshint(options))
 		.pipe(jshint.reporter("default"));
 
 	gulp.src("./test/*.js")
-		.pipe(jshint())
+		.pipe(jshint(options))
 		.pipe(jshint.reporter("default"));
 });
 
 // default task
-gulp.task("default", function() {
+gulp.task("default", function () {
 	gulp.run("jshint");
 });
