@@ -3,7 +3,9 @@ var es = require("event-stream");
 module.exports = function (param) {
 	"use strict";
 
-	function plugin(file, callback) {
+	// see "Writing a plugin"
+	// https://github.com/wearefractal/gulp
+	function <%= pluginName %>(file, callback) {
 
 		// if necessary check for required param(s), e.g. options hash, etc.
 		if (!param) {
@@ -28,5 +30,5 @@ module.exports = function (param) {
 		callback(null, file);
 	}
 
-	return es.map(plugin);
+	return es.map(<%= pluginName %>);
 };
