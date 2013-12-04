@@ -7,10 +7,10 @@
 <%= appname %> does only one thing very well.
 
 ```javascript
-var plugin = require("<%= appname %>");
+var <%= pluginName %> = require("<%= appname %>");
 
 gulp.src("./src/*.txt")
-  .pipe(plugin("I'm appended to file!"))
+  .pipe(<%= pluginName %>("I'm appended to file!"))
   .pipe(gulp.dest("./dist"));
 ```
 
