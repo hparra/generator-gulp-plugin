@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "A generator for Yeoman",
   "keywords": [
-  	"gulp",
-  	"gulpplugin",
+    "gulp",
+    "gulpplugin",
     "yeoman-generator"
   ],
   "homepage": "https://github.com/hparra/generator-gulp-plugin",
@@ -27,7 +27,9 @@
   },
   "devDependencies": {
     "mocha": "~1.14.0",
-    "github": "~0.1.12"
+    "github": "~0.1.12",
+    "gulp": "~2.6.1",
+    "gulp-jshint": "~1.1.0"
   },
   "peerDependencies": {
     "yo": ">=1.0.0"
