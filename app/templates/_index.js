@@ -1,13 +1,13 @@
 var es = require("event-stream");
 
-module.exports = function(param) {
+module.exports = function (param) {
 	"use strict";
 
 	function plugin(file, callback) {
 
 		// if necessary check for required param(s), e.g. options hash, etc.
-		if (!params) {
-			callback(new Error("No param supplied"), null);
+		if (!param) {
+			callback(new Error("No param supplied"), undefined);
 		}
 
 		// check if file.contents is a `Buffer`
@@ -29,4 +29,4 @@ module.exports = function(param) {
 	}
 
 	return es.map(plugin);
-}
+};

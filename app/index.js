@@ -42,7 +42,7 @@ var githubUserInfo = function (name, cb) {
 	});
 };
 
-var GulpPluginGenerator = module.exports = function GulpPluginGenerator(args, options, config) {
+var GulpPluginGenerator = module.exports = function GulpPluginGenerator(args, options) {//, config) {
 	yeoman.generators.Base.apply(this, arguments);
 
 	this.on("end", function () {
