@@ -27,6 +27,7 @@ describe("gulp-plugin generator", function () {
             ".gitignore",
             ".jshintrc",
             "index.js",
+            "Gulpfile.js",
             "LICENSE",
             "package.json",
             "README.md"
