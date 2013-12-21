@@ -105,6 +105,7 @@ GulpPluginGenerator.prototype.app = function app() {
 
 	this.copy("test/_main.js", "test/main.js");
 	this.copy("test/fixtures/hello.txt", "test/fixtures/hello.txt");
+	this.copy("test/expected/hello.txt", "test/expected/hello.txt");
 };
 
 GulpPluginGenerator.prototype.projectfiles = function projectfiles() {
