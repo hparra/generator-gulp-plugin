@@ -101,7 +101,7 @@ GulpPluginGenerator.prototype.app = function app() {
 	this.copy("_Gulpfile.js", "Gulpfile.js");
 	this.copy("_package.json", "package.json");
 	this.copy("_README.md", "README.md");
-	this.copy("_LICENSE", "LICENSE");
+	this.template("_LICENSE", "LICENSE");
 
 	this.copy("test/_main.js", "test/main.js");
 	this.copy("test/fixtures/hello.txt", "test/fixtures/hello.txt");
