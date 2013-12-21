@@ -39,11 +39,7 @@ gulp.task("jshint", function () {
 		.pipe(jshint(options))
 		.pipe(jshint.reporter("default"));
 
-	gulp.src("./app/**/*.js")
-		.pipe(jshint(options))
-		.pipe(jshint.reporter("default"));
-
-	gulp.src("./test/*.js")
+	gulp.src("./app/*.js")
 		.pipe(jshint(options))
 		.pipe(jshint.reporter("default"));
 });
