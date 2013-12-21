@@ -98,7 +98,6 @@ GulpPluginGenerator.prototype.gitfiles = function gitfiles() {
 
 GulpPluginGenerator.prototype.app = function app() {
 	this.copy("_index.js", "index.js");
-	this.copy("_Gulpfile.js", "Gulpfile.js");
 	this.copy("_package.json", "package.json");
 	this.copy("_README.md", "README.md");
 	this.template("_LICENSE", "LICENSE");
