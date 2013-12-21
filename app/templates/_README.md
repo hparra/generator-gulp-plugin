@@ -1,18 +1,39 @@
+(PLUGIN AUTHOR: Please read [Plugin README conventions](https://github.com/wearefractal/gulp/wiki/Plugin-README-Conventions), then delete this line)
+
 # <%= appname %> [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
 
-<%= appname %> is a plugin for [gulp](https://github.com/wearefractal/gulp).
+> <%= pluginName %> plugin for [gulp](https://github.com/wearefractal/gulp)
 
 ## Usage
 
-<%= appname %> does only one thing very well.
+First, install `<%= appname %>` as a development dependency:
+
+```shell
+npm install --save-dev <%= appname %>
+```
+
+Then, add it to your `gulpfile.js`:
 
 ```javascript
 var <%= pluginName %> = require("<%= appname %>");
 
-gulp.src("./src/*.txt")
-  .pipe(<%= pluginName %>("I'm appended to file!"))
-  .pipe(gulp.dest("./dist"));
+gulp.src("./src/*.ext")
+	.pipe(<%= pluginName %>({
+		msg: "Hello Gulp!"
+	}))
+	.pipe(gulp.dest("./dist"));
 ```
+
+## API
+
+### <%= pluginName %>(options)
+
+#### options.msg
+Type: `String`  
+Default: `Hello World`
+
+The message you wish to attach to file.
+
 
 ## License
 
