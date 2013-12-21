@@ -9,7 +9,7 @@ module.exports = function (param) {
 
 		// if necessary check for required param(s), e.g. options hash, etc.
 		if (!param) {
-			callback(new Error("No param supplied"), undefined);
+			callback(new Error("<%= appname %>: No param supplied"), undefined);
 		}
 
 		// check if file.contents is a `Buffer`
@@ -19,15 +19,17 @@ module.exports = function (param) {
 			// http://nodejs.org/api/buffer.html
 			file.contents = new Buffer(String(file.contents) + "\n" + param);
 
+			callback(null, file);
+
 		} else { // assume it is a `stream.Readable`
 
-			// do fancy stream io stuff
 			// http://nodejs.org/api/stream.html
 			// http://nodejs.org/api/child_process.html
 			// https://github.com/dominictarr/event-stream
-		}
 
-		callback(null, file);
+			// accepting streams is optional
+			callback(new Error("<%= appname %>: streams not supported"), undefined);
+		}
 	}
 
 	return es.map(<%= pluginName %>);
