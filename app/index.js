@@ -102,6 +102,7 @@ GulpPluginGenerator.prototype.app = function app() {
 	this.copy("_package.json", "package.json");
 	this.copy("_README.md", "README.md");
 	this.template("_LICENSE", "LICENSE");
+	this.copy("_travis.yml", ".travis.yml");
 
 	this.copy("test/_main.js", "test/main.js");
 	this.copy("test/fixtures/hello.txt", "test/fixtures/hello.txt");

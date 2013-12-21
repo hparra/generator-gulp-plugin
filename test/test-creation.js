@@ -26,6 +26,7 @@ describe("gulp-plugin generator", function () {
             ".gitattributes",
             ".gitignore",
             ".jshintrc",
+            ".travis.yml",
             "index.js",
             "Gulpfile.js",
             "LICENSE",
