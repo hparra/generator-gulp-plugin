@@ -4,7 +4,7 @@ module.exports = function (param) {
 	"use strict";
 
 	// see "Writing a plugin"
-	// https://github.com/wearefractal/gulp
+	// https://github.com/wearefractal/gulp/wiki/Writing-a-gulp-plugin
 	function <%= pluginName %>(file, callback) {
 
 		// if necessary check for required param(s), e.g. options hash, etc.
