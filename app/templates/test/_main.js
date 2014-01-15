@@ -4,7 +4,10 @@
 var fs = require("fs"),
 	es = require("event-stream"),
 	should = require("should");
+
 require("mocha");
+
+delete require.cache[require.resolve("../")];
 
 var gutil = require("gulp-util"),
 	<%= pluginName %> = require("../");

@@ -1,6 +1,7 @@
 (PLUGIN AUTHOR: Please read [Plugin README conventions](https://github.com/wearefractal/gulp/wiki/Plugin-README-Conventions), then delete this line)
 
-# <%= appname %> [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+# <%= appname %>
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]  [![Coverage Status](coveralls-image)](coveralls-url) [![Dependency Status][depstat-image]][depstat-url]
 
 > <%= pluginName %> plugin for [gulp](https://github.com/wearefractal/gulp)
 
@@ -44,6 +45,9 @@ The message you wish to attach to file.
 
 [travis-url]: http://travis-ci.org/<%= githubUser %>/<%= appname %>
 [travis-image]: https://secure.travis-ci.org/<%= githubUser %>/<%= appname %>.png?branch=master
+
+[coveralls-url]: https://coveralls.io/r/<%= githubUser %>/<%= appname %>
+[coveralls-image]: https://coveralls.io/repos/<%= githubUser %>/<%= appname %>/badge.png
 
 [depstat-url]: https://david-dm.org/<%= githubUser %>/<%= appname %>
 [depstat-image]: https://david-dm.org/<%= githubUser %>/<%= appname %>.png
