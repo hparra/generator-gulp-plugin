@@ -10,7 +10,7 @@ require("mocha");
 delete require.cache[require.resolve("../")];
 
 var gutil = require("gulp-util"),
-	<%= pluginName %> = require("../");
+	<%= pluginNameCamel %> = require("../");
 
 describe("<%= _.slugify(appname) %>", function () {
 
@@ -30,7 +30,7 @@ describe("<%= _.slugify(appname) %>", function () {
 			contents: fs.readFileSync("test/fixtures/hello.txt")
 		});
 
-		var stream = <%= pluginName %>("World");
+		var stream = <%= pluginNameCamel %>("World");
 
 		stream.on("error", function(err) {
 			should.exist(err);
@@ -59,7 +59,7 @@ describe("<%= _.slugify(appname) %>", function () {
 			contents: fs.createReadStream("test/fixtures/hello.txt")
 		});
 
-		var stream = <%= pluginName %>("World");
+		var stream = <%= pluginNameCamel %>("World");
 
 		stream.on("error", function(err) {
 			should.exist(err);
@@ -86,7 +86,7 @@ describe("<%= _.slugify(appname) %>", function () {
 			contents: fs.createReadStream("test/fixtures/hello.txt")
 		});
 
-		var stream = <%= pluginName %>("World");
+		var stream = <%= pluginNameCamel %>("World");
 
 		stream.on("error", function(err) {
 			should.exist(err);

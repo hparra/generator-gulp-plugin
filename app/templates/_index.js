@@ -11,7 +11,7 @@ module.exports = function (param) {
 
 	// see "Writing a plugin"
 	// https://github.com/gulpjs/gulp/wiki/Writing-a-Plugin:-Guidelines
-	function <%= pluginName %>(file) {
+	function <%= pluginNameCamel %>(file) {
 
 		// Do nothing if no contents
 		if (file.isNull()) return this.queue(file);
@@ -39,5 +39,5 @@ module.exports = function (param) {
 		}
 	}
 
-	return through(<%= pluginName %>);
+	return through(<%= pluginNameCamel %>);
 };

@@ -75,6 +75,7 @@ GulpPluginGenerator.prototype.askFor = function askFor() {
 		this.githubUser = props.githubUser;
 		this.pluginName = props.pluginName;
 		this.appname = "gulp-" + this.pluginName;
+		this.pluginNameCamel = this._.camelize(this.pluginName);
 		done();
 	}.bind(this));
 };
