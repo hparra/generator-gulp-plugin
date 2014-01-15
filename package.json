@@ -1,10 +1,10 @@
 {
   "name": "generator-gulp-plugin",
   "version": "0.3.1",
-  "description": "A generator for Yeoman",
+  "description": "A Yeoman generator for gulp plugins",
   "keywords": [
     "gulp",
-    "gulpplugin",
+    "gulpfriendly",
     "yeoman-generator"
   ],
   "homepage": "https://github.com/hparra/generator-gulp-plugin",
