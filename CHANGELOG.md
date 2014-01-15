@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4
+
+* Uses Gulp 3.3 plugin template (@floatdrop)
+* Fixed handling of dash-case plugin names (@floatdrop)
+* Fixed outstanding Gulpfile issues (@mikaelbr)
+
 ## 0.3.1
 
 * Fixed missing github dependency (@janraasch)
