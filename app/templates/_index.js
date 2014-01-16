@@ -1,4 +1,4 @@
-var through = require("through"),
+var through = require("through2"),
 	gutil = require("gulp-util");
 
 module.exports = function (param) {
@@ -11,20 +11,12 @@ module.exports = function (param) {
 
 	// see "Writing a plugin"
 	// https://github.com/gulpjs/gulp/wiki/Writing-a-Plugin:-Guidelines
-	function <%= pluginNameCamel %>(file) {
+	function <%= pluginNameCamel %>(file, enc, callback) {
 
 		// Do nothing if no contents
-		if (file.isNull()) return this.queue(file);
-
-		// check if file.contents is a `Buffer`
-		if (file.isBuffer()) {
-
-			// manipulate buffer in some way
-			// http://nodejs.org/api/buffer.html
-			file.contents = new Buffer(String(file.contents) + "\n" + param);
-
-			this.queue(file);
-
+		if (file.isNull()) {
+			this.push(file);
+			return callback();
 		}
 
 		if (file.isStream()) {
@@ -36,8 +28,21 @@ module.exports = function (param) {
 			// accepting streams is optional
 			this.emit("error",
 				new gutil.PluginError("<%= appname %>", "Stream content is not supported"));
+			return callback();
 		}
+
+		// check if file.contents is a `Buffer`
+		if (file.isBuffer()) {
+
+			// manipulate buffer in some way
+			// http://nodejs.org/api/buffer.html
+			file.contents = new Buffer(String(file.contents) + "\n" + param);
+
+			this.push(file);
+
+		}
+		return callback();
 	}
 
-	return through(<%= pluginNameCamel %>);
+	return through.obj(<%= pluginNameCamel %>);
 };
