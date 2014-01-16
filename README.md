@@ -25,7 +25,7 @@ $ yo gulp-plugin
 
 ## Writing Gulp Plugins
 
-See the [Writing a gulp plugin](https://github.com/wearefractal/gulp/wiki/Writing-a-gulp-plugin) wiki page for guidelines and an example to get you started.
+See the [Writing a gulp plugin](https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md) wiki page for guidelines and an example to get you started.
 
 ## License 
 
