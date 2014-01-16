@@ -10,7 +10,7 @@ module.exports = function (param) {
 	}
 
 	// see "Writing a plugin"
-	// https://github.com/gulpjs/gulp/wiki/Writing-a-Plugin:-Guidelines
+	// https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md
 	function <%= pluginNameCamel %>(file, enc, callback) {
 
 		// Do nothing if no contents
