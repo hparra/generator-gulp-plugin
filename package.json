@@ -1,6 +1,6 @@
 {
   "name": "generator-gulp-plugin",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A Yeoman generator for gulp plugins",
   "keywords": [
     "gulp",

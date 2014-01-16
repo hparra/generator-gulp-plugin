@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.4.1
+
+# Uses through2
+# Fixes gulp-utils dependency
+# Fixes "Writing a gulp plugin" links
+
+Thanks to @mikaelbr
+
 ## 0.4
 
 * Uses Gulp 3.3 plugin template (@floatdrop)
