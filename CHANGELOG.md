@@ -2,9 +2,9 @@
 
 ## 0.4.1
 
-# Uses through2
-# Fixes gulp-utils dependency
-# Fixes "Writing a gulp plugin" links
+* Uses through2
+* Fixes gulp-utils dependency
+* Fixes "Writing a gulp plugin" links
 
 Thanks to @mikaelbr
 
