@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2
+
+* Cosmetic template changes
+
 ## 0.4.1
 
 * Uses through2
