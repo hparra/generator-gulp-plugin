@@ -12,6 +12,7 @@ module.exports = function (param) {
 	// see "Writing a plugin"
 	// https://github.com/gulpjs/gulp/blob/master/docs/writing-a-plugin/README.md
 	function <%= pluginNameCamel %>(file, enc, callback) {
+		/*jshint validthis:true*/
 
 		// Do nothing if no contents
 		if (file.isNull()) {
