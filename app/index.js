@@ -67,7 +67,7 @@ GulpPluginGenerator.prototype.askFor = function askFor() {
 		default: "someuser"
 	}, {
 		name: "pluginName",
-		message: "What\"s the base name of your gulp plugin?",
+		message: "What's the base name of your gulp plugin?",
 		default: pluginName
 	}];
 
