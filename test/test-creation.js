@@ -32,6 +32,7 @@ describe("gulp-plugin generator", function () {
             "package.json",
             "README.md",
             "test/main.js",
+            "test/expected/hello.txt",
             "test/fixtures/hello.txt"
         ];
 
