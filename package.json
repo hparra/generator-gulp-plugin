@@ -23,8 +23,11 @@
     "test": "mocha"
   },
   "dependencies": {
+    "chalk": "^1.1.1",
+    "github": ">=0.1.12",
+    "underscore.string": "^3.2.2",
     "yeoman-generator": ">=0.14.0",
-    "github": ">=0.1.12"
+    "yosay": "^1.1.0"
   },
   "devDependencies": {
     "mocha": ">=1.14.0",

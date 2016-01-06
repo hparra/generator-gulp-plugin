@@ -1,6 +1,6 @@
 
 {
-  "name": "<%= _.slugify(appname) %>",
+  "name": "<%= appname %>",
   "version": "0.0.0",
   "description": "A plugin for Gulp",
   "keywords": [
@@ -11,7 +11,7 @@
     "email": "<%= email %>",
     "url": "<%= githubUrl %>"
   },
-  "repository": "<%= githubUser %>/<%= _.slugify(appname) %>",
+  "repository": "<%= githubUser %>/<%= appname %>",
   "scripts": {
     "test": "istanbul test _mocha --report html -- test/*.js --reporter spec",
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"

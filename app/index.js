@@ -3,6 +3,10 @@ var util = require("util");
 var url = require("url");
 var path = require("path");
 var yeoman = require("yeoman-generator");
+var _ = require("underscore.string");
+var wiring = require("html-wiring");
+var yosay = require("yosay");
+var chalk = require("chalk");
 
 /* jshint -W106 */
 var proxy = process.env.http_proxy || process.env.HTTP_PROXY || process.env.https_proxy || process.env.HTTPS_PROXY || null;
@@ -20,7 +24,7 @@ if (proxy) {
 var GitHubApi = require("github");
 var github = new GitHubApi(githubOptions);
 
-var extractPluginName = function (_, appname) {
+var extractPluginName = function (appname) {
 	var slugged = _.slugify(appname),
 		match = slugged.match(/^gulp-(.+)/);
 
@@ -43,23 +47,25 @@ var githubUserInfo = function (name, cb) {
 };
 
 var GulpPluginGenerator = module.exports = function GulpPluginGenerator(args, options) {//, config) {
-	yeoman.generators.Base.apply(this, arguments);
+	yeoman.Base.apply(this, arguments);
 
 	this.on("end", function () {
 		this.installDependencies({ skipInstall: options["skip-install"] });
 	});
 
-	this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, "../package.json")));
+	this.pkg = JSON.parse(wiring.readFileAsString(path.join(__dirname, "../package.json")));
 };
 
-util.inherits(GulpPluginGenerator, yeoman.generators.Base);
+util.inherits(GulpPluginGenerator, yeoman.Base);
 
 GulpPluginGenerator.prototype.askFor = function askFor() {
 	var done = this.async();
-	var pluginName = extractPluginName(this._, this.appname);
+	var pluginName = extractPluginName(this.appname);
 
 	// have Yeoman greet the user.
-	console.log(this.yeoman);
+	this.log(yosay(
+		'Welcome to the fantastico ' + chalk.yellow('generator-sub') + ' generator!'
+	));
 
 	var prompts = [{
 		name: "githubUser",
@@ -74,8 +80,8 @@ GulpPluginGenerator.prototype.askFor = function askFor() {
 	this.prompt(prompts, function (props) {
 		this.githubUser = props.githubUser;
 		this.pluginName = props.pluginName;
-		this.appname = "gulp-" + this.pluginName;
-		this.pluginNameCamel = this._.camelize(this.pluginName);
+		this.appname = _.slugify("gulp-" + this.pluginName);
+		this.pluginNameCamel = _.camelize(this.pluginName);
 		done();
 	}.bind(this));
 };
