@@ -25,8 +25,11 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "github": ">=0.1.12",
+    "html-wiring": "^1.2.0",
     "underscore.string": "^3.2.2",
+    "yeoman-assert": "^2.1.1",
     "yeoman-generator": ">=0.14.0",
+    "yeoman-test": "^1.0.0",
     "yosay": "^1.1.0"
   },
   "devDependencies": {

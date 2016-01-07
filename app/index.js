@@ -64,7 +64,7 @@ GulpPluginGenerator.prototype.askFor = function askFor() {
 
 	// have Yeoman greet the user.
 	this.log(yosay(
-		'Welcome to the fantastico ' + chalk.yellow('generator-sub') + ' generator!'
+		"Welcome to the fantastico " + chalk.yellow("generator-sub") + " generator!"
 	));
 
 	var prompts = [{
