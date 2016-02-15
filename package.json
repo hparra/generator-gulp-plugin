@@ -23,8 +23,14 @@
     "test": "mocha"
   },
   "dependencies": {
+    "chalk": "^1.1.1",
+    "github": ">=0.1.12",
+    "html-wiring": "^1.2.0",
+    "underscore.string": "^3.2.2",
+    "yeoman-assert": "^2.1.1",
     "yeoman-generator": ">=0.14.0",
-    "github": ">=0.1.12"
+    "yeoman-test": "^1.0.0",
+    "yosay": "^1.1.0"
   },
   "devDependencies": {
     "mocha": ">=1.14.0",
@@ -36,7 +42,7 @@
     "yo": ">=1.0.0"
   },
   "engines": {
-    "node": ">=0.8.0",
+    "node": ">=0.10.0",
     "npm": ">=1.2.10"
   },
   "licenses": [

@@ -12,7 +12,7 @@ delete require.cache[require.resolve("../")];
 var gutil = require("gulp-util"),
 	<%= pluginNameCamel %> = require("../");
 
-describe("<%= _.slugify(appname) %>", function () {
+describe("<%= appname %>", function () {
 
 	var expectedFile = new gutil.File({
 		path: "test/expected/hello.txt",
