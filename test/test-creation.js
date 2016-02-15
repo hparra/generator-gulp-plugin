@@ -23,6 +23,7 @@ describe("gulp-plugin generator", function () {
       ".gitignore",
       ".jshintrc",
       ".travis.yml",
+      ".yo-rc.json",
       "index.js",
       "LICENSE",
       "package.json",
