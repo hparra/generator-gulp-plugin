@@ -7,7 +7,7 @@ var gulp = require("gulp"),
 // JSHint
 // https://github.com/wearefractal/gulp-jshint
 gulp.task("jshint", function () {
-	gulp.src(["./**/*.js", "!node_modules/**", "!test/temp/**"])
+	gulp.src(["./**/*.js", "!node_modules/**", "!test/temp/**", "!app/templates/**/*.js"])
 		.pipe(jshint(join(__dirname, ".jshintrc")))
 		.pipe(jshint.reporter("default"));
 });
